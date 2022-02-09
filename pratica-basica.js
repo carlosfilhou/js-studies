@@ -11,9 +11,15 @@ function media(n1,n2){
 }
 
 for (var index in nomes){
+
+  var n1 = nota1[index]
+  var n2 = nota2[index]
+
   console.log("Aluno(a) " + nomes[index] + 
               " teve a sua primeira nota " +
-              nota1[index] +
+              n1 +
               " e a segunda " +
-              nota2[index])
+              n2 + 
+              " portanto sua média é " +
+              media(n1, n2))
 }
