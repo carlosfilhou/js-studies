@@ -10,10 +10,23 @@ function media(n1,n2){
   return (n1 + n2) / 2
 }
 
+function passou(media){
+
+  if(media >= 7){
+    return "APROVADO"
+  }
+  else{
+    return "REPROVADO"
+  }
+
+}
+
 for (var index in nomes){
 
   var n1 = nota1[index]
   var n2 = nota2[index]
+
+  var m = media(n1, n2)
 
   console.log("Aluno(a) " + nomes[index] + 
               " teve a sua primeira nota " +
@@ -21,5 +34,7 @@ for (var index in nomes){
               " e a segunda " +
               n2 + 
               " portanto sua média é " +
-              media(n1, n2))
+              m +
+              " esse aluno(a) está: " +
+              passou(m))
 }
